@@ -20,12 +20,34 @@
   margin: 5px;
 }
 
-.information button {
-  width: 320;
+button {
+  width: 320px;
   height: 50px;
   margin-top: 15px;
 }
 
-.information button:hover {
+button:hover {
   cursor: pointer;
+}
+
+.employees {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.employee {
+  width: 800px;
+  height: auto;
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  padding: 10px;
+  font-family: monospace;
+}
+
+.employee h3 {
+  margin: 20px;
 }
