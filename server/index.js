@@ -2,15 +2,17 @@ const express = require("express");
 const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
+require("dotenv").config();
 
 app.use(cors());
 app.use(express.json());
 
+// test
 const db = mysql.createConnection({
-  user: "root",
-  host: "localhost",
-  password: "root",
-  database: "employee-system",
+  user: "baf6c628186676",
+  host: "us-cdbr-east-04.cleardb.com",
+  password: "4c490b18",
+  database: "heroku_8b6a2f8bab1cb8b",
 });
 
 app.post("/create", (req, res) => {
@@ -43,4 +45,6 @@ app.get("/employees", (req, res) => {
   });
 });
 
-app.listen(3001, () => console.log("your server is running..."));
+app.listen(process.env.PORT || 3001, () =>
+  console.log("your server is running...")
+);
